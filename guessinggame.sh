@@ -17,7 +17,7 @@ fi
 while [[ $guess != $number_of_lines ]]
 do
   read -p "How many files do you think there are in this directory? " guess #Prompts user for input
-  if ! [[ $guess =~ ^[0-9]+$ ]]
+  if ! [[ $guess =~ ^[0-9]+$ ]] # handles error inputs
   then
     echo "Please enter a number"
   elif [[ $guess -gt $number_of_lines ]]
